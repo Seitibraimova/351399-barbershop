@@ -292,28 +292,83 @@ body {
   	margin-top: 65px;
   	padding-top: 60px;
   	padding-bottom: 40px;
+  	color: #ffffff;
+  	background: #232323 url("../img/pattern-darkgray.jpg");
 }
 
 .footer-contacts {
   	float: left;
   	width: 320px;
   	margin-right: 60px;
-  	min-height: 90px;
+}
+
+.footer-contacts a {
+	color: #ffffff;	
+	text-decoration: none;
+	
 }
 
 .footer-social {
   	float: left;
   	width: 180px;
-  	min-height: 90px;
+  	text-align: center;
+  	
+}
+
+.footer-social p {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.social-btn {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	margin: 0 2px;
+	font-size: 0;
+	vertical-align: top;
+	text-decoration: none;
+	background: #000000; /* спрайтик */
+	transition: 
+		background-position 0.5s,
+		background-color 0.5s;
+}
+
+.social-btn:hover {
+	background-color: #ffffff;
+}
+
+.social-btn-vk {
+	background-position: ;	/* спрайтик */
+}
+
+.social-btn-fb {
+	background-position: ;	/* спрайтик */
+}
+
+.social-btn-inst {
+	background-position: ;	/* спрайтик */
 }
 
 .footer-copyright {
   	float: right;
-  	width: 180px;
-  	min-height: 90px;
+  	max-width: 140px;
 }
 
+.footer-copyright p {
+	margin: 0;
+	margin-bottom: 15px;
+	text-align: center;
+}
 
+.footer-copyright .btn {
+	margin-right: 0px;
+}
+
+.footer-copyright .btn:hover {
+	color: #000000;
+	background-color: #ffffff;
+}
 
 /* КАТАЛОГ */
 
