@@ -1,3 +1,4 @@
+html,
 body {
 	min-width: 960px;
 	font-weight: 700;
@@ -8,6 +9,11 @@ body {
 	text-transform: uppercase;
 
 	background: #000000 url("../img/background.jpg") no-repeat center top; 
+}
+
+.inner-page {
+	color: #000000;
+	background: #f8f5f2 url("../img/pattern-gray.jpg") repeat;
 }
 
 .clearfix::after {
@@ -22,13 +28,16 @@ body {
 	padding: 0 10px;
 }
 
-
 /* ГЛАВНАЯ */
 
 .main-header {
 	margin-bottom: 60px;
 	color: #ffffff;
 	background-color: #000000 
+}
+
+.inner-page .main-header {
+	margin-bottom: 52px;
 }
 
 .main-navigation {
@@ -370,9 +379,231 @@ body {
 	background-color: #ffffff;
 }
 
+/* PRICE */
+
+.main-navigation .logo-inner {
+	float: left;
+	width: 111px;
+	height: 24px;
+	padding-top: 21px;
+}	
+
+.main-navigation .logo-inner img {
+	width: 111px;
+	height: 24px;
+}	
+
+.main-navigation .logo-inner {
+	float: left;
+	width: 111px;
+	height: 24px;
+	padding-top: 21px;
+}	
+
+.main-navigation .active {
+  	position: relative;
+  	background-color: none;
+}
+
+.main-navigation .active::after {
+  	content: "";
+  	position: absolute;
+  	right: 20px;
+  	bottom: 0;
+	left: 20px;	
+  	height: 4px;
+  	background-color: #ffffff;
+}
+
+.main-navigation .active a:hover {
+	background: none;
+}
+
+.inner-page-title {
+	margin-bottom: 50px;
+}	
+
+.inner-page-title h1 {
+	margin: 0;
+	margin-bottom: 14px;
+	padding: 0;
+	font-size: 30px;
+	line-height: 42px;
+}
+
+.breadcrumbs {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.breadcrumbs li {
+	position: relative;
+	display: inline;
+	padding-right: 37px;
+}
+
+.breadcrumbs li::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	right: 16px;
+	width: 8px;
+	height: 8px;
+	background: #000000;
+	transform: rotate(45deg);
+}
+
+.breadcrumbs a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	text-decoration: underline;
+}
+
+.breadcrumbs .current {
+	color: #aba9a7;
+}
+
+.breadcrumbs .current::after {
+	display: none;
+}
+
+.inner-content {
+	margin-bottom: 75px;
+}
+
+.inner-content h2 {
+  	margin-top: 60px;
+  	margin-bottom: 30px;
+  	font-size: 24px;
+  	line-height: 30px;
+}
+
+.inner-content h3 {
+	margin-top: 60px;
+  	margin-bottom: 30px;
+  	font-size: 20px;
+  	line-height: 24px;
+}
+
+.inner-content h2 + h3 {
+	margin-top: 30px;
+} 
+
+.inner-content p {
+	margin: 14px 0;
+} 
+
+.inner-content table {
+	border-collapse: collapse;
+}
+
+.inner-content td {
+	padding: 10px 15px; 
+	border: 2px solid #000000;	
+}
+
+.big-heading {
+	margin-top: 50px;
+	margin-bottom: 57px;
+	text-align: center;
+}
+
+.big-heading h2 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0;
+  padding: 0 25px;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  background: #f8f3f0 url("../img/pattern-gray.jpg") repeat;
+}
+
+.big-heading::after {
+  content: "";
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  display: block;
+  border-bottom: 2px solid #000000;
+}
+
+.custom-list-1 {
+	margin: 14px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.custom-list-1 li {
+	position: relative;
+	margin-bottom: 11px;
+	padding-left: 20px;
+}
+
+.custom-list-1 li:before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
+	transform: rotate(45deg);
+}
+
+.prices-table {
+	width: 100%;
+}
+
+.prices-table td  {
+	width: 50%;
+}
+
+.prices-table td:last-child {
+	text-align: center;
+}
+
+.inner-columns {
+	margin: 57px 0;
+}
+
+.inner-column-left,
+.inner-column-right {
+	width: 460px;
+}
+
+.inner-column-left {
+	float: left;
+}
+
+.inner-column-right {
+	float: right;
+}
+
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+	margin-top: 0;
+}
+
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+	margin-bottom: 0;
+}
+
+.short-text {
+	padding-right: 80px;
+}
+
+.inner-page-footer {
+	box-shadow: inset 0px 30px 40px -15px #000000;
+}
+
 /* КАТАЛОГ */
-
-
 
 .inner-header {
   	margin-bottom: 55px;
@@ -383,6 +614,7 @@ body {
 .inner-navigation {
   	float: left;
   	width: 780px;
+
 }
 
 .inner-navigation ul {
@@ -421,11 +653,7 @@ body {
 	min-height: 680px;
 }
 
-
-
 /* КАРТОЧКА ТОВАРА */	
-
-
 
 .item-card-left {
 	float: left;
