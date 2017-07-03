@@ -102,6 +102,7 @@ body {
 	background-position: 0 0;
 	opacity: 0.3;
 }
+
 .login:hover::before {
 	opacity: 1;
 }
@@ -123,7 +124,6 @@ body {
   	min-height: 175px;
   	margin-right: 20px;
   	text-align: center;
-  	
 }
 
 .feature-item:last-child {
@@ -284,6 +284,7 @@ body {
 	background-color: #f9f6f3;
 	border:2px solid #000000;
 } 
+
 .booking-form input:nth-child(2n) {
 	margin-right: 0;
 }
@@ -314,14 +315,12 @@ body {
 .footer-contacts a {
 	color: #ffffff;	
 	text-decoration: none;
-	
 }
 
 .footer-social {
   	float: left;
   	width: 180px;
   	text-align: center;
-  	
 }
 
 .footer-social p {
@@ -377,6 +376,181 @@ body {
 .footer-copyright .btn:hover {
 	color: #000000;
 	background-color: #ffffff;
+}
+
+/* Всплывающая форма */
+
+.modal-content {
+	position: fixed;
+	top: 120px;
+	left: 50%;
+	display: none;
+	width: 300px;
+  	margin-left: -230px;
+  	padding: 50px 80px;
+  	color: #000000;
+  	background: #f8f3f0 url("../img/pattern-gray.jpg")repeat;
+  	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);	
+}
+
+.modal-content-map {
+  	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	display: none;
+  	z-index: 20;
+  	width: 766px;
+  	height: 561px;
+  	margin-top: -280px;
+  	margin-left: -390px;
+  	background: #e9e5dc url("../img/map.jpg");
+  	border: 7px solid white;
+  	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	display: none;
+  	z-index: 10;
+  	width: 100%;
+  	height: 100%;
+  	background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-close {
+	position: absolute;
+	top: 0;
+	right: -34px;
+	width: 22px;
+	height: 22px;
+	font-size: 0;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  	content: "";
+  	position: absolute;
+	top: 10px;
+	left: 2px;
+  	width: 19px;
+  	height: 3px;
+  	background-color: #d0d0d0;
+  	border-radius: 1px;
+}
+
+.modal-content-close::before {
+	transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+	transform: rotate(-45deg);
+	
+}
+
+.modal-content h2 {
+  	margin: 0;
+  	margin-bottom: 20px;
+  	font-size: 30px;
+  	line-height: 42px;
+}
+
+.modal-content p {
+	margin: 0;
+	margin-bottom: 14px;
+}
+
+.modal-content .login-form {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+	width: 241px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 10px 15px;
+	padding-right: 40px;
+	font-size: 14px;
+	line-height: 24px;
+	font-family: "PT Sans Narrow", "Arial", sans-serif;
+	color: #000000;
+	text-transform: uppercase;
+	background-color: #f9f6f3;
+	border: 2px solid #000000;
+}
+
+.login-form input:focus {
+  	border-color: #663d15;
+}
+
+.login-form input.icon-user {
+  	background-image: url("img/sprite.png");
+  	background-repeat: no-repeat;
+  	background-position: 100% -504px;
+}
+
+.login-form input.icon-password {
+	background-image: url("img/sprite.png");
+  	background-repeat: no-repeat;
+  	background-position: 100% -45px;
+}
+
+.login-form .restore {
+	float: right;
+	color: #000000;
+}
+
+.login-form .btn {
+	width: 100%;
+	margin-top: 15px;
+}
+
+.login-checkbox input[type="checkbox"]{
+	display: none;
+}
+
+.login-checkbox {
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.login-checkbox:hover {
+  	color: #663d15;
+}
+
+.login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  	position: absolute;
+  	top: -3px;
+  	left: 0;
+  	width: 17px;
+  	height: 17px;
+  	border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  	content: "";
+  	position: absolute;
+  	top: 8px;
+  	left: 1px;
+  	width: 15px;
+  	height: 2px;
+  	background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
+  	transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
+  	transform: rotate(-45deg);
 }
 
 /* PRICE */
@@ -513,24 +687,24 @@ body {
 }
 
 .big-heading h2 {
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-  margin: 0;
-  padding: 0 25px;
-  font-size: 48px;
-  line-height: 48px;
-  text-align: center;
-  background: #f8f3f0 url("../img/pattern-gray.jpg") repeat;
+  	position: relative;
+  	z-index: 2;
+  	display: inline-block;
+  	margin: 0;
+  	padding: 0 25px;
+  	font-size: 48px;
+  	line-height: 48px;
+  	text-align: center;
+  	background: #f8f3f0 url("../img/pattern-gray.jpg") repeat;
 }
 
 .big-heading::after {
-  content: "";
-  position: relative;
-  top: -25px;
-  z-index: 1;
-  display: block;
-  border-bottom: 2px solid #000000;
+  	content: "";
+  	position: relative;
+  	top: -25px;
+  	z-index: 1;
+  	display: block;
+  	border-bottom: 2px solid #000000;
 }
 
 .custom-list-1 {
@@ -561,7 +735,12 @@ body {
 }
 
 .prices-table td  {
-	width: 50%;
+	width: 50%;/* Please do not use this import in production. You could download this font from here https://fontstorage.com/font/pt-sans-narrow */
+@import "http://fonts.fontstorage.com/import/ptsansnarrow.css";
+/*
+	PT Sans Narrow, 400, 700
+*/
+
 }
 
 .prices-table td:last-child {
@@ -603,43 +782,7 @@ body {
 	box-shadow: inset 0px 30px 40px -15px #000000;
 }
 
-/* КАТАЛОГ */
-
-.inner-header {
-  	margin-bottom: 55px;
-  	color: #ffffff;
-  	background-color: #000000
-}
-
-.inner-navigation {
-  	float: left;
-  	width: 780px;
-
-}
-
-.inner-navigation ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-.inner-navigation li {
-  	display: inline-block;
-  	vertical-align: top;
-}
-
-.inner-navigation a {
-  	color: #ffffff;
-  	text-decoration: none;
-}
-
-.catalog-caption {
-	margin-bottom: 55px;
-}
-
-.catalog-full {
-	margin-bottom: 45px;
-}
+/* SHOP */
 
 .catalog-full-left {
 	float: left;
@@ -647,205 +790,152 @@ body {
 	min-height: 570px;
 }
 
+.shop-filter-1,
+.shop-filter-2 {
+	border: transparent;
+}
+
+.shop-filter-1 ul,
+.shop-filter-2 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.shop-filter-1 .legend {
+	margin: 0;
+	padding: 0;
+}
+
 .catalog-full-right {
 	float: right;
 	width: 700px;
-	min-height: 680px;
 }
 
-/* КАРТОЧКА ТОВАРА */	
+.catalog-item {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 220px;
+	margin: 0 17px 17px 0;
+	border: 1px solid red;
+}
+
+.catalog-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.catalog-item img {
+	display: block;
+}
+
+.product-info {
+	background-color: #ffffff;
+}
+
+.product-info h2 {
+	margin: 0;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 13px 0 14px 0;
+}
+
+.category-name a{
+	display: block;
+	text-decoration: none;
+	color: #000000;
+	padding: 0 55px 0 16px;
+}
+
+.product-info .category {
+	text-transform: none; 
+}
+
+.product-info .close-btn {
+	margin-left: 13px;
+	padding-bottom: 15px;
+}
+
+.close-btn {
+	font-size: 0;
+	margin-bottom: 0px;
+}
+
+.close-btn .btn-price {
+	margin-right: 0;
+	padding: 10px 28px;
+	color: #000000;
+	background-color: #e5e5e5;
+}
+
+.close-btn .btn-buy {
+	padding: 10px 19px;
+}
+
+/* ITEM */
 
 .item-card-left {
 	float: left;
-	width: 460px;
-	min-height: 670px;
+	width: 480px;
+}
+
+.3-small img {
+	
+	
 }
 
 .item-card-right {
 	float: right;
 	width: 390px;
-	min-height: 560px;
+	padding-top: 20px;
 }
 
-/* Всплывающая форма */
-
-.modal-content {
-	position: fixed;
-	top: 120px;
-	left: 50%;
-	display: none;
-	width: 300px;
-  	margin-left: -230px;
-  	padding: 50px 80px;
-  	color: #000000;
-  	background: #f8f3f0 url("../img/pattern-gray.jpg")repeat;
-  	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);	
+.status span {
+	float: left;
 }
 
-.modal-content-map {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  display: none;
-  z-index: 20;
-  width: 766px;
-  height: 561px;
-  margin-top: -280px;
-  margin-left: -390px;
-  background: #e9e5dc url("../img/map.jpg");
-  border: 7px solid white;
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+.status .code {
+	float: right;
+	color: #aba9a7;
 }
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: none;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+.description-1 p {
+	padding-top: 17px;
+	margin-bottom: 35px;
 }
 
-.modal-content-close {
+.description-2 {
+	margin-top: 63px;
+}
+
+
+.description-2 .composition-title{
+	font-size: 24px;
+	margin-bottom: 31px;
+}
+
+.composition {
+	margin: 0;	
+	padding: 0;
+	list-style: none;
+}
+
+.composition li {
+	position: relative;
+	padding-left: 20px;
+}
+
+.composition li:before {
+	content: "";
 	position: absolute;
-	top: 0;
-	right: -34px;
-	width: 22px;
-	height: 22px;
-	font-size: 0;
-	background-color: transparent;
-	border: 0;
-	cursor: pointer;
-}
-
-.modal-content-close::before,
-.modal-content-close::after {
-  	content: "";
-  	position: absolute;
-	top: 10px;
-	left: 2px;
-  	width: 19px;
-  	height: 3px;
-  	background-color: #d0d0d0;
-  	border-radius: 1px;
-}
-
-.modal-content-close::before {
+	top: 8px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background-color: #000000;
 	transform: rotate(45deg);
 }
 
-.modal-content-close::after {
-	transform: rotate(-45deg);
-	
-}
-
-.modal-content h2 {
-  	margin: 0;
-  	margin-bottom: 20px;
-
-  	font-size: 30px;
-  	line-height: 42px;
-}
-
-.modal-content p {
-	margin: 0;
-	margin-bottom: 14px;
-}
-
-.modal-content .login-form {
-	margin-top: 30px;
-	margin-bottom: 10px;
-}
-
-.login-form input[type="text"],
-.login-form input[type="password"] {
-	width: 241px;
-	margin: 0;
-	margin-bottom: 10px;
-	padding: 10px 15px;
-	padding-right: 40px;
-	font-size: 14px;
-	line-height: 24px;
-	font-family: "PT Sans Narrow", "Arial", sans-serif;
-	color: #000000;
-	text-transform: uppercase;
-	background-color: #f9f6f3;
-	border: 2px solid #000000;
-}
-
-.login-form input:focus {
-  border-color: #663d15;
-}
-
-.login-form input.icon-user {
-  background-image: url("img/sprite.png");
-  background-repeat: no-repeat;
-  background-position: 100% -504px;
-}
-
-.login-form input.icon-password {
-  background-image: url("img/sprite.png");
-  background-repeat: no-repeat;
-  background-position: 100% -45px;
-}
-
-.login-form .restore {
-	float: right;
-	color: #000000;
-}
-
-.login-form .btn {
-	width: 100%;
-	margin-top: 15px;
-}
-
-.login-checkbox input[type="checkbox"]{
-	display: none;
-}
-
-.login-checkbox {
-	position: relative;
-	padding-left: 30px;
-	cursor: pointer;
-}
-
-.login-checkbox:hover {
-  color: #663d15;
-}
-
-.login-checkbox input[type="checkbox"] + .checkbox-indicator {
-  position: absolute;
-  top: -3px;
-  left: 0;
-
-  width: 17px;
-  height: 17px;
-
-  border: 2px solid #000000;
-}
-
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before,
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 1px;
-
-  width: 15px;
-  height: 2px;
-
-  background-color: #000000;
-}
-
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
-  transform: rotate(45deg);
-}
-
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator::after {
-  transform: rotate(-45deg);
-}
 
 
 
